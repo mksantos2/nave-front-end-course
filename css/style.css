@@ -1,0 +1,43 @@
+body{
+    display:flex;
+    flex-flow: column wrap;
+    margin: 10px 100px 10px 100px;
+}
+
+p{  
+    font-size: 18px;
+    width: 600px;
+}
+
+.div1{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;    
+    background-color: gray;
+}
+
+.div2{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: : flex-end;
+}
+
+.div1 p{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.div2 p{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+
+#inicio{
+    display:flex;
+    justify-content: center;
+}
