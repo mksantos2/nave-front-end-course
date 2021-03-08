@@ -26,6 +26,9 @@ const func = arg => {
 // === REAL SHIT ===
 
 
+// ################### CHALLENGE 10 ###################
+
+
 // Anonymous function subtraction returning x - y;
 
 const subtrai = function (x, y){
@@ -71,6 +74,44 @@ function testaSinal_ButBetter (a, b){
 
 
 // testing the program
-testaSinal_ButBetter(1,1);
-testaSinal(1,1);
+
+//testaSinal_ButBetter(1,1);
+//testaSinal(1,1);
+
+
+// ################### CHALLENGE 11 ###################
+
+//          ####### PART 1 - OBJETCS #######
+
+
+// object 'User' with unique attributes
+const user = {
+    nome: 'Usuário',
+    idade: 25,
+    endereco: {
+      rua: 'Rua central',
+      numero: 1
+    },
+    projetos: ['Projeto 1', 'Projeto 2']
+  }
+  
+
+//First task: print object attributes with point reference
+
+//console.log(user.nome);
+//console.log(user.endereco.rua);
+//console.log(user.projetos[1]);
+
+
+//Second task: print object attributes with square brackets reference
+
+console.log("Nome: "+ user['nome']);
+console.log("Endereço (Rua): "+user['endereco']['rua']);
+console.log("Projeto: "+user['projetos'][1]);
+
+let adressNum = 'numero';
+let adress = 'endereco';
+
+console.log("Número do Endereço do "+ user['nome'] + " é "+user[adress][adressNum]+".");
+
 
