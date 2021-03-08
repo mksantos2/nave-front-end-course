@@ -138,6 +138,7 @@ function desafioArr(students, num){
     
     switch (num) {
         case 1:
+            //passing anonymous function as forEach parameter
             students.forEach(elem => {
                 console.log(elem.name);
             });
@@ -150,7 +151,7 @@ function desafioArr(students, num){
             });
             break;
         case 3:
-            newStudents = [];
+            let newStudents = [];
             students.forEach(elem => {
                 if (elem.scholarship){
                     newStudents = newStudents.concat(elem);
@@ -159,6 +160,7 @@ function desafioArr(students, num){
             console.log(newStudents);
             break;    
         default:
+            // default option w/ warning message
             console.log("Digite o array e o numero da operação.");
             break;
     }
