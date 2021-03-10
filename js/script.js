@@ -169,6 +169,7 @@ function desafioArr(students, num){
 
 }
 
+/*
 console.log("- First task:");
 desafioArr(students, 1);
 
@@ -177,3 +178,86 @@ desafioArr(students, 2);
 
 console.log("- Third task:");
 desafioArr(students, 3);
+*/
+
+// ################### CHALLENGE 12 ###################
+
+//     ####### PART 1 - SPECIFIC METHODS #######
+
+
+// Array of employees objects
+const colaboradores = [
+    {
+        name: 'Juca',
+        idade: 25,
+        cargo: 'front-end'
+    },
+    {
+        name: 'Márcia',
+        idade: 23,
+        cargo: 'back-end'
+    },
+    {
+        name: 'Vitória',
+        idade: 28,
+        cargo: 'designer'
+    },
+    {
+        name: 'Fernando',
+        idade: 19,
+        cargo: 'estagiario'
+    },
+    {
+        name: 'Fabiane',
+        idade: 25,
+        cargo: 'back-end'
+    },
+    {
+        name: 'Jéssica',
+        idade: 23,
+        cargo: 'front-end'
+    },
+]
+
+// print employees names
+const somenteNomes = colaboradores.map(colaborador =>{
+    return colaborador.name;
+})
+
+//print only front-end employees
+const printFrontEnd = colaboradores.filter(colaborador =>{
+    return colaborador.cargo == 'front-end';
+})
+
+
+//print only the first employee over 23 yo
+const maiorDe23 = colaboradores.find(colaborador =>{
+    return colaborador.idade > 23;
+})
+
+//print if every employee's age is over 18
+const maiorDe18 = colaboradores.every(colaborador =>{
+    return colaborador.idade > 18;
+})
+
+//print if at least one employee is an intern
+const temEstagiario = colaboradores.some(colaborador =>{
+    return colaborador.cargo = 'estagiário';
+})
+
+console.log(somenteNomes);
+console.log(printFrontEnd);
+console.log(maiorDe23);
+
+
+if(maiorDe18){
+    console.log("Todos os colaboradores são maiores de 18 anos.");
+}else{
+    console.log("Nem todos os colaboradores são maiores de 18 anos.");
+}
+
+if(temEstagiario){
+    console.log("Existe pelo menos um estagiário colaborador.");
+}else{
+    console.log("Não existe nenhum estagiário colaborador.");
+}
