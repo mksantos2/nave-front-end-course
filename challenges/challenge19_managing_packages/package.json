@@ -1,0 +1,15 @@
+{
+  "name": "challenge19",
+  "version": "1.0.0",
+  "description": "My New Project description.",
+  "main": "index.js",
+  "author": "Moniele K Santos <you@example.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "date-fns": "^2.19.0"
+  }
+}
