@@ -1,4 +1,4 @@
-### read me ###
+### READ ME ###
 
 Must install yarn and npm!
 
