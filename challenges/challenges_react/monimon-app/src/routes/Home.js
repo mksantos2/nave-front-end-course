@@ -3,11 +3,7 @@ import logoCat from '../images/Cat-icon.png'
 import '../styles/App.css';
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useParams
+  Link
 } from "react-router-dom";
 
 
@@ -27,13 +23,13 @@ const Home = () => {
   const [linkTitle, setLinkTitle] = useState("Linkzaum");
 
   // button text prop 
-  const [textButton, setTextButton] = useState("Butao");
+  const textButton = "Butao";
 
   // button hidden cat 
   const catText = "Meow aperte!";
 
   // title text for h1
-  const [title, setTitle] = useState("Eu acho que vi um gatinho...");
+  const title = "Eu acho que vi um gatinho...";
 
   // count how many times press the button
   const [pressCount, setPressCount] = useState(0);
@@ -112,6 +108,7 @@ const Home = () => {
         {/*my button from module Button.js*/}
         <Button text={(pressCount < 2) ? textButton : catText} handleClick={click}/>
         <Link to="/comments">Comments</Link>
+        <Link to="/create-post">Criar um Post</Link>
         
       </header>
     </div>
