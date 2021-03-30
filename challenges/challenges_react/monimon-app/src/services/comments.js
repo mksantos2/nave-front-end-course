@@ -8,8 +8,8 @@ import axios from "axios";
 const getComments = () => axios.get("https://jsonplaceholder.typicode.com/comments");
 
 // POST method
-const postComments = (form) => axios.post('https://jsonplaceholder.typicode.com/posts', form);
+const postPost = (form) => axios.post('https://jsonplaceholder.typicode.com/posts', form);
 
 
 
-export {getComments, postComments};
+export {getComments, postPost};

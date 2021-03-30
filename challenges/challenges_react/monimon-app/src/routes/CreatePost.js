@@ -4,7 +4,7 @@
 import {toast} from "react-toastify";
 
 // importing post axios service
-import {postComments} from "../services/comments";
+import {postPost} from "../services/comments";
 
 // importing my module form to create new post
 import FormPost from "../components/FormPost";
@@ -16,7 +16,7 @@ const CreatePost = () => {
 	const fecthPosts = async (form) => { 
 		try{
 			// sending the request with Promise
-			const {data : post} = await postComments(form);
+			const {data : post} = await postPost(form);
 
 			// notify the user
 			toast.success("Post criado com sucesso!", {
@@ -37,6 +37,8 @@ const CreatePost = () => {
 
 	const onSubmit = data => {
 		
+		// casting the useId to number, but keeping the others props
+		data = { ...data, userId : Number(data.userId)};
 		fecthPosts(data);
 
 	};
