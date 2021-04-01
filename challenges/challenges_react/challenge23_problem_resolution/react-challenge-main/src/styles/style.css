@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+body {
+  background-color: #171219 ;
+}
+
+p {
+  color: #B0B0B0;
+  font-family: "Courier New";
+}
+
+textarea {
+  background-color: LightGray;
+}
+
+button {
+  cursor: pointer;
+  width: 130px;
+  border-radius: 8px;
+  border: none;
+  padding: 4px;
+  color: white;
+  margin: 20px;
+
+}
+button + button {
+  margin-left: 15px;
+
+}
+
+input, select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.modalTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  font-weight: bold;
+
+
+}
+
+
+
+.titleCreatePost {
+  color: white;
+  font-family: "Courier New";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+
+.sideBarLinks {
+  color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  font-family: "Courier New";
+
+
+}
+
+.sideBarLinks:hover, .sideBarLinks:active {
+  background-color: green;
+  color: white;
+}
+
+.error {
+  background-color: #d50000;
+}
+
+.info {
+  background-color: #29b74b;
+}
+.cancel {
+  background-color: #555;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px;
+}
+.m-top-25 {
+  margin-top: 25px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: white;
+}
+.text {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.card-item {
+  max-width: 380px;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+.card-item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.modal {
+  position: fixed;
+  top: 25%;
+  max-width: 480px;
+  width: 100%;
+  padding: 32px;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid #212121;
+  animation: fadein 0.5s forwards ease-in-out;
+  background-color:   #606060;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
