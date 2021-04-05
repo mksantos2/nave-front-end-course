@@ -2,23 +2,15 @@ import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Form from "../components/Form";
-
-import { useLocation } from 'react-router-dom';
-
 import { createPost } from "../services/posts";
 
-
 import {ContainerCreate} from "../styles/formStyles";
-
 import "../styles/style.css";
 
 const CreatePost = () => {
+
+  // to navigate pages
   const history = useHistory();
-
-  const location = useLocation();
-
-  // getting the location of the page
-  //console.log("location: ", location.pathname);
 
   // function to request POST method to create new post
   const fetchPost = async (form) => {
@@ -31,7 +23,6 @@ const CreatePost = () => {
     }
   };
 
-  // wrapper to casting the userId to number then send the request
   const onSubmit = (data) => {
     // setting the userId as the user number 1 to test the page
     data = { ...data, userId : 1};

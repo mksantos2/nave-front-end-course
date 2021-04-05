@@ -1,50 +1,41 @@
 
 import Form from "../components/Form";
 
-import { useHistory } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
-import { useEffect, useState } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 
 import { toast } from "react-toastify";
 
 
-import { getPostsList, deletePost, putPost } from "../services/posts";
+import { putPost } from "../services/posts";
 
 const EditPost = () => {
 
-	
+	// getting the page parameters location 
 	const location = useLocation();
-	//const [formUpdate, setFormUpdate] = useState(location.state.post);
-
 
 	// getting the location state of the post to update
-	const antes =  location.state.post;
+	const before =  location.state.post;
 
 	const history = useHistory();
 	
 
 	const onSubmit = (data) => {
 
-		const novo = { ...antes, body : data.body, title: data.title};
+		const postUpdated = { ...before, body : data.body, title: data.title};
 
-    	handleEdit(novo);
-
-    	// console.log("antes: ", antes);
-    	// console.log("novo: ", novo);
+    	handleEdit(postUpdated);
   	}
 
   	// function that calls PUT method
 	const handleEdit = async (data) => {
 		try {
 		  
-		  // // updanting the body to send the PUT request
-		  
-		  
+		  // send the PUT request 
 		  await putPost(data);
-
 		  
 		  toast.success("Post atualizado com sucesso!!");
 		  history.push("/list");
+
 		} catch {
 		  toast.error("Ooops!! Houve um problema ao atualizar o post.");
 		} 

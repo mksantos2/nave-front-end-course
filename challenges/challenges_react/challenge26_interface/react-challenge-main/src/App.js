@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import Sidebar from "./components/Sidebar";
 
 import CreatePost from "./routes/CreatePost";
 import ListPosts from "./routes/ListPosts";

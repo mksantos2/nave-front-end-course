@@ -1,12 +1,14 @@
 
 import styled from "styled-components";
 
-import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import { green, red, purple} from '@material-ui/core/colors';
+
+// FORM STYLES //
 
 
 
+// label style
 export const Label = styled.label` 
 	font-family: "Roboto";
 	padding-top: 20px;
@@ -14,7 +16,7 @@ export const Label = styled.label`
 
 `;
 
-
+// main div style
 export const ContainerCreate = styled.div `
 	display: flex;
 	flex-direction: column;
@@ -26,7 +28,7 @@ export const ContainerCreate = styled.div `
 
 `;
 
-
+// input style
 export const ContainerInput = styled.input `
 	
 	padding: 10px;
