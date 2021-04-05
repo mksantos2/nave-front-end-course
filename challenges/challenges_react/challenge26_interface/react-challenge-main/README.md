@@ -4,8 +4,8 @@
 ### FILES
 
     src/
-    ├── components/			=== == == == == == == == == == DESCRIPTION == == == == == == == == == == = =  
-    │   ├── Form.js    	    : form to Create and Edit Posts 
+    ├── components/		=== == == == == == == == == == DESCRIPTION == == == == == == == == == == = =  
+    │   ├── Form.js    	   : form to Create and Edit Posts 
     │   ├── Sidebar.js      : Sidebar to navigate through the pages
     ├── routes/
     │   ├── CreatePost.js   : page with the Form to create a new Post
